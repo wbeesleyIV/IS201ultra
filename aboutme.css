@@ -1,0 +1,148 @@
+body {
+    background-image: url(../assets/svg/lightblobs2.svg);
+    font-family: 'Source Code Pro';
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: rgb(21, 33, 165);
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    background-image: url('../assets//img//facebackground.png');
+    background-size: 150vh;
+    background-repeat: no-repeat;
+    background-position: center 10%;
+    width: 100%;    /* Full width of the viewport */
+    height: 80vh;
+    text-align: center; /* Center text if .header-content is less than 100% width */
+    margin-bottom: 10px;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 0 auto; /* Centers the content block within .header */
+    padding: 20px; /* Optional: Padding for better spacing */
+    font-size: 32px;
+    font-family: 'Source Code Pro';
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: rgb(7, 93, 241);
+}
+
+img {
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    height: 60px;             
+    background-color: #33333300;  
+    
+}
+
+nav ul{
+    display: inline-block;
+    
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 19px; 
+    color: rgb(249, 249, 251);
+    font-weight: 600;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    min-height: 400px;
+    padding: 50px 15vw;
+    font-size: 20px;
+}
+
+section h2 {
+    color: rgb(3, 34, 136);
+}
+
+section p {
+    text-align: left;
+    color: rgb(0, 39, 106);
+}
+
+section .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+section img {
+    height: 40vh;
+    width: 55vh
+}
+
+section .movies {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    width: 80vh;
+}
+
+section .video-conatiner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.layer1 {
+    background-image: url('../assets/svg/layer1.svg');
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('../assets/svg/layer1.svg');
+}
+
+
+

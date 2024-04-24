@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Wil's website! - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Sedan:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&family=Sedan:ital@0;1&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="dumypage.html" rel="resume" />
+    <link href="wackamole.html" rel="html">
+    <link href="./css/quote.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #8ac1f9;">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Wil Beesley</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="dumypage.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="dummyaboutme.html">About Me</a>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="wackamole.html">Wack a Mole game!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('./assets/img/herophoto.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <H1>Wil Beesley</H1>
+                        <span class="subheading">Brother, Student, Friend, and Follower of Jesus Christ.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <div class="spacer layer1"></div>
+
+    <br>
+    <br>
+    <br>
+
+                <!-- Post preview-->
+                <style>
+                    .tableauPlaceholder {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        /* 16:9 aspect ratio (adjust as needed) */
+                        height: 0;
+                        overflow: hidden;
+                        max-width: 1000px;
+                        /* Adjust this value to your desired maximum width */
+                        margin: 0 auto;
+                        /* Centers the container horizontally */
+                    }
+
+                    .tableauPlaceholder object {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                </style>
+                <Section>
+                    <h1 style="width: 600px; margin: 0 auto; text-align: center;">Welcome to my website!</h1>
+                    <br>
+                    <br>
+                    <h3 style="width: 600px; margin: 0 auto; text-align: center;">below you'll find some cool things to play around with. Check out the other pages too!</h3>
+                    <br>
+                    <br>
+                    <hr>
+                    <br>
+                    <br>
+
+                    <h5 style="width: 600px; margin-left: 440px">Here is an awesome random quote generator I made!</h5>
+                    <p></p>
+                    <br>
+                        <div class="quote-box">
+                            
+                            <h2>Quote of the day</h2>
+                            <br>
+                            <blockquote id="quote">Loading...</blockquote>
+                            <br>
+                            <span id="author">Loading...</span>
+                            <br>
+                                <div>
+                                    <Button onclick="getquote(api_url)" style="font-family: Arial, Helvetica, sans-serif;">New Quote</Button>
+                                </div>
+                        </div>
+
+                    <script>
+                        const quote = document.getElementById("quote");
+                        const author = document.getElementById("author");
+                        const api_url = "https://api.quotable.io/random";
+
+                        async function getquote(url){
+                            const response = await fetch(url);
+                            var data = await response.json();
+                            console.log(data);
+                            quote.innerHTML = data.content;
+                            author.innerHTML = data.author;
+                        }
+
+                        getquote(api_url);
+
+                    </script>
+
+                   
+                </Section>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <br>
+                <Section>
+
+                    <h5 style="width: 600px; margin: 0 auto;">Here is a cool database to find if someone where you're from is playing somewhere!</h5>
+                    <p></p>
+                    <div class='tableauPlaceholder' id='viz1713911515986' style='position: relative'><noscript><a
+                                href='https:&#47;&#47;www.census.gov&#47;library&#47;visualizations&#47;interactive&#47;big-game-census-2024.html'><img
+                                    alt='Big Game Census '
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;C7&#47;C78JGRNG9&#47;1_rss.png'
+                                    style='border: none' /></a></noscript><object class='tableauViz'
+                            style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='path' value='shared&#47;C78JGRNG9' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image'
+                                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;C7&#47;C78JGRNG9&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object></div>
+                    <script
+                        type='text/javascript'> var divElement = document.getElementById('viz1713911515986'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1277px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+                    </script>
+                    
+                   
+                </Section>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Pager-->
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/wil.beesley.7">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                    
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; My website 2024</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

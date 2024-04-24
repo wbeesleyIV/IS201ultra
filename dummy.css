@@ -1,0 +1,191 @@
+     
+
+        
+        body {
+            margin: 0;
+            height: 100%;
+            padding: 0;
+            font-family: 'Source Code Pro', Noto Sans TC;
+            color: white;
+            background: #001122;
+        }
+
+      
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            min-height: 200px;
+            padding: 50px 15vw;
+            font-size: x-large;
+          }
+          
+          section .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+          }
+          
+          section .missionphoto {
+            width: 50%;
+          }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            text-align: center;
+        }
+
+        .blue {
+            background: #0066FF
+        }
+
+        .red {
+            background: rgb(246, 39, 39)
+        }
+
+        .pink {
+            background: #ff0066
+        }
+
+        .dark {
+            background: #001122
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+       
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url('../assets/svg/layer1.svg');
+        }
+
+        .layer2 {
+            background-image: url('../assets/svg/layer2.svg');
+        }
+
+        .blob {
+            background-image: url('./blob.svg');
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+
+        .masthead {
+            background-image: url(./herophoto.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+        }
+
+        .site-heading {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+            height: 100%; /* Take up full height of the parent container */
+          }
+
+        nav {
+            background: rgba(55, 205, 250, 0);
+            width: 100%;
+            text-align: center;
+            font-family: 'Source Code Pro', Sedan;
+            height: 0px;
+            font: size 25px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 15px;
+            margin: 0;
+            display: inline-block;
+            font-family: 'Sedan', Sedan;
+            font: size 25px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            font-family: 'Sedan', Sedan;
+            font: size 25px;
+            
+
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+            font-family: 'Sedan', Sedan;
+            font: size 25px;
+            
+
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight:normal;
+            text-decoration:none;
+            margin-right: 50px;
+            font-family:'Source Code Pro';
+            font: size 25px;
+        }
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(-20%);
+        }
+
+        .Education {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        .text-columnleft {
+            text-align: left;
+        }
+
+        .topbutton a {
+            text-align: center;
+            text-decoration: none;
+            font-family: "Noto Sans TC", Sedan;
+            color: #757474;
+            font-size: medium;
+        }
+
+        .topbutton {
+            text-align: center;
+        }
+
+        p a {
+            /* Styles for anchor links */
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 100px;
+            color: #c0bebe;
+            font-family:monospace
+            /* Add more styles as needed */
+        }
